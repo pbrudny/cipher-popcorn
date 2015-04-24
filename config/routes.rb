@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
-  get 'sessions/new'
+  resources :users
 
-  get 'users/new'
+  get "/log-in" => "sessions#new"
+  get "/log-out" => "sessions#destroy", as: :log_out
 
-  get 'users/create'
-
+  root :to => 'home#index'
 end
