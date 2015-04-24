@@ -1,4 +1,19 @@
-/*
-  Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
-*/
+html, body, h1, h2, h3, h4, ul, ol, li, p, a {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    font: inherit;
+    font-size: 100%;
+}
+
+.header {
+    padding: 15px;
+    background: #242424;
+}
+
+.content-section {
+    padding: 15px;
+    width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+}

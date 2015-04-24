@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     if @user
       flash[:notice] = "You've been logged in."
       session[:user_id] = @user.id
-      redirect_to "/"
+      redirect_to itunes_search_path
     else
       flash[:alert] = "Wrong login or password"
       redirect_to log_in_path

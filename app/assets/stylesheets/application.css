@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+.nav {
+    padding: 0;
+    text-align: center;
+}
+.nav li {
+    display: inline;
+    padding-right: 20px;
+}
+
+.nav li:last-child {
+    margin-left: 500px;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+}
+
+.flash-section {
+    padding: 20px;
+    background-color: palegreen;
+    width: 800px;
+    height: 20px;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    font-style: oblique;
+}

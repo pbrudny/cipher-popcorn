@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'itunes/search'
+  get 'itunes/results'
+
   resources :users
 
   get "/log-in" => "sessions#new"

@@ -8,28 +8,39 @@
 </head>
 <body>
 
-<%if flash.present? %>
-    <% flash.each do |msg| %>
-        <div class="<%=msg[0]%>">
-          <%=msg[1]%>
-        </div>
-    <%end%>
-<%end%>
-<nav>
-  <ul>
-    <li>
-      <%= link_to 'Log in', log_in_path %>
-    </li>
-    <li>
-      <%= link_to 'Log out', log_out_path %>
-    </li>
-    <li>
-      <%= link_to 'Sign Up', new_user_path %>
-    </li>
-  </ul>
-</nav>
-<%= yield %>
+<div class="header">
+  <div class = "nav">
+    <ul>
+      <% if current_user.present? %>
+      <li>
+        <%= link_to 'Log out', log_out_path %>
+      </li>
+        <% else %>
+        <li>
+          <%= link_to 'Log in', log_in_path %>
+        </li>
+        <li>
+          <%= link_to 'Sign Up', new_user_path %>
+        </li>
+        <% end%>
+      </ul>
+    </div>
+    </div>
+</div>
 
+    <%if flash.present? %>
+    <div class="flash-section">
+        <% flash.each do |msg| %>
+            <div class="<%=msg[0]%>">
+              <%=msg[1]%>
+            </div>
+        <%end%>
+    </div>
+    <%end%>
+
+<div class="content-section">
+<%= yield %>
+</div>
 
 </body>
 </html>

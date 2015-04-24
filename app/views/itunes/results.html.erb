@@ -1,0 +1,21 @@
+<%= render 'search' %>
+<table class="results">
+      <tr>
+        <th>No</th>
+        <th>Poster</th>
+        <th>Title</th>
+        <th>Release date</th>
+        <th>Price</th>
+      </tr>
+  <% @results.each_with_index do |result,index| %>
+      <tr>
+        <td><%= index %></td>
+        <td><img src="<%= result.artwork_url60 %>"></td>
+        <td><%= result.collection_name %></td>
+        <td><%= result.release_date %></td>
+        <td><%= result.collection_price %></td>
+      </tr>
+<% end %>
+</table>
+
+

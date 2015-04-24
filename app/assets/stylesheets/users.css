@@ -1,4 +1,33 @@
-/*
-  Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
-*/
+h1 {
+    color: #000000;
+    margin: 15px 0 15px;
+    text-align: center;
+    font-family: Verdana, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+}
+h2 {
+    color: #333333;
+    margin: 20px 0 5px 0;
+    border-bottom: 1px solid #aaaaaa;
+    padding: 2px;
+    font-family: Verdana, sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    display: block;
+    margin-bottom: 15px;
+    width: 300px;
+    font-size: 20px;
+}
+
+input[type='submit'] {
+    margin-top: 20px;
+    width: 100px;
+}
