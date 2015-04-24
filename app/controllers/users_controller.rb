@@ -9,7 +9,7 @@ class UsersController < ApplicationController
       flash[:notice] = "Welcome to the site!"
       redirect_to "/"
     else
-      flash[:alert] = "There was a problem creating your account. Please try again."
+      flash[:alert] = "There was a problem creating your account. #{@user.errors.full_messages.to_sentence}"
       redirect_to :back
     end
   end
@@ -17,6 +17,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    params.require(:user).permit(:email, :name, :password, :password_confirmation)
   end
 end

@@ -1,1 +1,3 @@
-Welcome, <%=current_user.try :email %>
+<% if current_user.present? %>
+    Welcome, <%=current_user.email %>
+<% end %>
