@@ -6,7 +6,7 @@
 
 # Ignore bundler config.
 /.bundle
-
+.idea
 # Ignore uploaded files
 /public/assets
 /public/uploads
